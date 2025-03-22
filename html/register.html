@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Register - TechMarket</title>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+        <div class="loader-logo">TechMarket</div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">TechMarket</a>
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="products.html">Products</a>
+                <a href="add-product.html" id="add-product-link" style="display: none;">Add Product</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="profile.html" id="profile-link" style="display: none;">Profile</a>
+                <a href="my-products.html" id="my-products-link" style="display: none;">My Products</a>
+                <button id="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="auth-container glass fade-in">
+            <div class="auth-header">
+                <h2>Register</h2>
+            </div>
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required class="hover-glow">
+                </div>
+
+                <div class="form-group">
+                    <label for="password1">Password</label>
+                    <input type="password" id="password1" required class="hover-glow">
+                </div>
+
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" id="password2" required class="hover-glow">
+                </div>
+
+                <button type="submit" class="btn btn-block hover-grow">Register</button>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </form>
+            
+            <p id="message" class="message"></p>
+            
+            <div class="password-requirements slide-in-left">
+                <h3>Password Requirements</h3>
+                <ul>
+                    <li>At least 8 characters long</li>
+                    <li>Contains at least one uppercase letter</li>
+                    <li>Contains at least one number</li>
+                    <li>Contains at least one special character</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/register.js" defer></script>
+    <script type="module" src="../js/logout.js" defer></script>
+    <script type="module" src="../js/navbar.js" defer></script>
+    <script src="../js/ui-enhancements.js" defer></script>
+</body>
+</html>
+

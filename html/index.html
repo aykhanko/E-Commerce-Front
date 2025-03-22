@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>TechMarket - Your Tech Store</title>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+        <div class="loader-logo">TechMarket</div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">TechMarket</a>
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="products.html">Products</a>
+                <a href="add-product.html" id="add-product-link" style="display: none;">Add Product</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="profile.html" id="profile-link" style="display: none;">Profile</a>
+                <a href="my-products.html" id="my-products-link" style="display: none;">My Products</a>
+                <button id="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero animated-bg">
+        <div class="container">
+            <h1 class="typewriter">Welcome to TechMarket</h1>
+            <p class="fade-in">Your one-stop shop for all computer hardware and tech products</p>
+            <a href="products.html" class="btn hover-grow">Browse Products</a>
+        </div>
+    </section>
+
+    <script type="module" src="../js/navbar.js" defer></script>
+    <script type="module" src="../js/logout.js" defer></script>
+    <script src="../js/ui-enhancements.js" defer></script>
+</body>
+</html>
+

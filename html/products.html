@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Products - TechMarket</title>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+        <div class="loader-logo">TechMarket</div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">TechMarket</a>
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="products.html">Products</a>
+                <a href="add-product.html" id="add-product-link" style="display: none;">Add Product</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="profile.html" id="profile-link" style="display: none;">Profile</a>
+                <a href="my-products.html" id="my-products-link" style="display: none;">My Products</a>
+                <button id="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header fade-in">
+            <h1>Products</h1>
+            <p>Discover the latest tech products from our marketplace</p>
+        </div>
+
+        <div class="products-container" id="product-list">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+
+        <div class="pagination" id="pagination">
+            <button id="prev-btn" disabled>Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <div id="loading-indicator" class="loading">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+      
+    <!-- Lightbox for product images -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="/placeholder.svg" alt="Product" class="lightbox-image">
+            <div class="lightbox-nav">
+                <button class="lightbox-prev">&lt;</button>
+                <button class="lightbox-next">&gt;</button>
+            </div>
+        </div>
+    </div>
+      
+    <script type="module" src="../js/products.js" defer></script>
+    <script type="module" src="../js/logout.js" defer></script>
+    <script type="module" src="../js/navbar.js" defer></script>
+    <script src="../js/ui-enhancements.js" defer></script>
+</body>
+</html>
+

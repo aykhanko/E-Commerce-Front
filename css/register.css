@@ -1,0 +1,33 @@
+/* Register page specific styles - inherits most styles from login.css */
+.password-requirements {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(58, 134, 255, 0.05);
+  border-radius: 4px;
+}
+
+.password-requirements h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.password-requirements ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.password-requirements li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.password-requirements li::before {
+  content: "•";
+  color: var(--primary-color);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+

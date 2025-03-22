@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - TechMarket</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+        <div class="loader-logo">TechMarket</div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">TechMarket</a>
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="products.html">Products</a>
+                <a href="add-product.html" id="add-product-link" style="display: none;">Add Product</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="profile.html" id="profile-link" style="display: none;">Profile</a>
+                <a href="my-products.html" id="my-products-link" style="display: none;">My Products</a>
+                <button id="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-container neumorphic fade-in">
+            <div class="profile-header animated-bg">
+                <div class="profile-avatar" id="profile-avatar"></div>
+                <h2 class="profile-username" id="username"></h2>
+            </div>
+            
+            <div class="profile-content">
+                <div class="profile-section slide-in-left">
+                    <h3 class="profile-section-title">Contact Information</h3>
+                    
+                    <div class="profile-item hover-grow">
+                        <span class="profile-item-label"><i class="fas fa-phone"></i> Phone</span>
+                        <div class="profile-item-value">
+                            <span id="phone" class="editable"></span>
+                            <button class="delete-btn" data-field="phone">X</button>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-item hover-grow">
+                        <span class="profile-item-label"><i class="fas fa-envelope"></i> Email</span>
+                        <div class="profile-item-value">
+                            <span id="email" class="editable"></span>
+                            <button class="delete-btn" data-field="email">X</button>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-item hover-grow">
+                        <span class="profile-item-label"><i class="fas fa-calendar"></i> Date of Birth</span>
+                        <div class="profile-item-value">
+                            <span id="date_of_birth" class="editable"></span>
+                            <button class="delete-btn" data-field="date_of_birth">X</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-actions">
+                    <button id="update-profile" class="btn hover-grow">Update Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/profile.js" defer></script>
+    <script type="module" src="../js/logout.js" defer></script>
+    <script type="module" src="../js/navbar.js" defer></script>
+    <script src="../js/ui-enhancements.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - TechMarket</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/add-product.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+        <div class="loader-logo">TechMarket</div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">TechMarket</a>
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="products.html">Products</a>
+                <a href="add-product.html" id="add-product-link" style="display: none;">Add Product</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="profile.html" id="profile-link" style="display: none;">Profile</a>
+                <a href="my-products.html" id="my-products-link" style="display: none;">My Products</a>
+                <button id="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header fade-in">
+            <h1>Add Product</h1>
+            <p>List your tech product for sale</p>
+        </div>
+
+        <form id="add-product-form" class="add-product-form neumorphic fade-in" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group slide-in-left">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" class="hover-glow">
+                        <option value="PC">PC</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="RAM">RAM</option>
+                        <option value="CPU">CPU</option>
+                        <option value="GPU">GPU</option>
+                        <option value="Storage">Storage</option>
+                    </select>
+                </div>
+                
+                <div class="form-group slide-in-right">
+                    <label for="brand">Brand</label>
+                    <input type="text" id="brand" name="brand" required class="hover-glow">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group slide-in-left">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" required class="hover-glow">
+                </div>
+                
+                <div class="form-group slide-in-right">
+                    <label for="photo">Photo</label>
+                    <div class="file-input-container">
+                        <label for="photo" class="file-input-label">
+                            <div class="file-input-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <span>Click to upload or drag and drop</span>
+                            <span class="file-name" id="file-name">No file selected</span>
+                        </label>
+                        <input type="file" id="photo" name="photo" accept="image/*" required class="file-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group full-width fade-in">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required class="hover-glow"></textarea>
+            </div>
+
+            <div id="extra-fields" class="specs-container fade-in">
+                <h3 class="specs-title">Specifications</h3>
+                <div class="form-row">
+                    <div class="form-group slide-in-left">
+                        <label for="cpu">CPU</label>
+                        <input type="text" id="cpu" name="cpu" class="hover-glow">
+                    </div>
+                    
+                    <div class="form-group slide-in-right">
+                        <label for="gpu">GPU</label>
+                        <input type="text" id="gpu" name="gpu" class="hover-glow">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group slide-in-left">
+                        <label for="ram">RAM</label>
+                        <input type="text" id="ram" name="ram" class="hover-glow">
+                    </div>
+                    
+                    <div class="form-group slide-in-right">
+                        <label for="storage">Storage</label>
+                        <input type="text" id="storage" name="storage" class="hover-glow">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-block hover-grow">Add Product</button>
+        </form>
+
+        <p id="message" class="message"></p>
+    </div>
+
+    <script type="module" src="../js/add-product.js" defer></script>
+    <script type="module" src="../js/logout.js" defer></script>
+    <script type="module" src="../js/navbar.js" defer></script>
+    <script src="../js/ui-enhancements.js" defer></script>
+    <script>
+        // File input enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('photo');
+            const fileName = document.getElementById('file-name');
+            
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    fileName.textContent = fileInput.files[0].name;
+                } else {
+                    fileName.textContent = 'No file selected';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
