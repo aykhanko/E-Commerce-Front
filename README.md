@@ -24,12 +24,12 @@ Follow these steps to set up and run the frontend locally:
 
 ### 1️⃣ Clone the repository:
 ```bash
-git clone <repository-link>
+git clone https://github.com/aykhanko/E-Commerce-Front.git
 ```
 
 ### 2️⃣ Navigate to the project directory:
 ```bash
-cd frontend
+cd E-Commerce-Front
 ```
 
 ### 3️⃣ Run the project in a browser:
