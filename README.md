@@ -1,4 +1,4 @@
-# 🛍️ Tech Marketplace Frontend
+# 🛍️ Tech Market Frontend
 
 This project is a **frontend interface** designed to connect with a **backend API** that allows users to sell technology products. It is built using **HTML, CSS, and JavaScript** to create a visually appealing user experience.
 
